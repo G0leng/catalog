@@ -1,5 +1,4 @@
 name: Gatsby Publish
-
 on:
   push:
     branches:
@@ -9,18 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Set up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 10.x
-      - name: npm install command
-        run: cd frontend && npm install
-      - name: Run build command
-        run: cd frontend && npm run build
+      - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
-          access-token: ${{ secrets.demo }}
+          access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
