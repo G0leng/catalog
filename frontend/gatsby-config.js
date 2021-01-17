@@ -38,6 +38,6 @@ module.exports = {
     "gatsby-plugin-offline",
   ],
  
-  pathPrefix: "/catalog/frontend",
+  pathPrefix: "/frontend",
   
 };
