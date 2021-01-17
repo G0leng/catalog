@@ -32,8 +32,12 @@ module.exports = {
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
+        icon: "src/images/dxc_logo_black.png",
       },
     },
     "gatsby-plugin-offline",
   ],
+ 
+  pathPrefix: "/catalog",
+  
 };
